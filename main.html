@@ -17,11 +17,11 @@
       </select>
 
       <label for="rate">Rate:</label>
-      <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+      <input name="rate" type="range" min="0" max="3" value="1" step="0.1" id="rate">
 
       <label for="pitch">Pitch:</label>
 
-      <input name="pitch" type="range" min="0" max="2" step="0.1">
+      <input name="pitch" type="range" min="0" max="2" step="0.1" id="pitch">
       <textarea name="text">Hello! I love JavaScript 👍</textarea>
       <button id="stop">Stop!</button>
       <button id="speak">Speak</button>
@@ -37,7 +37,7 @@
   const stopButton = document.querySelector('#stop');
 
   //Your code goes here
-   msg.lang = "en";
+  msg.lang = "en";
   speakButton.addEventListener("click", () => {
   msg.text = document.querySelector("textarea").value;
 });
@@ -72,6 +72,7 @@ speakButton.addEventListener("click", () => {
 stopButton.addEventListener("click", () => {
   window.speechSynthesis.cancel();
 });
+
 </script>
 
 </body>
